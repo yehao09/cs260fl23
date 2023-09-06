@@ -1,0 +1,10 @@
+compile with:
+g++ -o main main.cpp
+
+
+we will convert this to a python class
+
+nit-picking: style guide
+Per our style guide: https://peps.python.org/pep-0008/#package-and-module-names
+The python file name should be all lower case: rectangle.py
+
