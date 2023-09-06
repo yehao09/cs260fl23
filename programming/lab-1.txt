@@ -1,0 +1,41 @@
+course: cs260
+name: ___________
+date: 2023-09-06
+
+Note that for the duration of this course:
+    All numbers are given as strings.
+        For example: "1062" is a decimal string (base-10)
+
+    Unless otherwise stated, use of special libraries is not allowed
+        Depend on standard language constructs such as 
+            flow control 
+            iteration
+            recursion
+
+
+##########################################################################################            
+# Task-1 2023-09-06
+
+    Task-1:
+     Given a number in base=10 as string:
+       iterate over the given string one element at a time to find the integer decimal
+       representation of the original value.
+
+     Finally, print the following to the screen:
+         ordinal value and its data type
+         resulting value and its data type
+
+##########################################################################################
+
+    1. Read user input number and store it as string.
+       num = read_user_input()
+    
+    2. iterate over the string and calculate the decimal value
+       
+    high level loop 
+    while exponent >=0
+        result_value += num[index] * base**exponent
+        index = index + 1
+        exponent = exponent - 1
+   
+    
