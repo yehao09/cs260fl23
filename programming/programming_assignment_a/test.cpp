@@ -18,10 +18,10 @@ int main () {
   std::cout << std::endl;
 
   std::cout << "test size() method, print the size of alphabet of symbols.\n";
-  std::cout << "alphabetbase 10 maxValid: " << abBase10.size()<< std::endl;
-  std::cout << "alphabetbase 2 maxValid: " << abBase2.size()<< std::endl;
-  std::cout << "alphabetbase 8 maxValid: " << abBase8.size()<< std::endl;
-  std::cout << "alphabetbase 16 maxValid: " << abBase16.size()<< std::endl;
+  std::cout << "alphabetbase 10 size(): " << abBase10.size()<< std::endl;
+  std::cout << "alphabetbase 2 size(): " << abBase2.size()<< std::endl;
+  std::cout << "alphabetbase 8 size(): " << abBase8.size()<< std::endl;
+  std::cout << "alphabetbase 16 size(): " << abBase16.size()<< std::endl;
   std::cout << std::endl;
 
 
