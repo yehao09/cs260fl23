@@ -1,0 +1,37 @@
+course: cs260
+name: lab-3
+date: 2023-09-20
+
+Note that for the duration of this course all numbers are given as strings.
+Unless otherwise stated, use of special libraries is not allowed.
+        
+##########################################################################################            
+# lab-3 2023-09-20
+
+    Task-1:
+    Implement Repeated Division algorithm to be able to convert 
+     decimal --> binary
+     decimal --> octal
+     decimal --> hexadecimal
+    
+    examples:
+    "25" is a string decimal --> "11001" binary
+
+    "25" is a string decimal --> "31" octal
+    
+    "25" is a string decimal --> "19" hexadecimal
+    
+    Task-2:
+    Finally, print the message to the screen with the following:
+        original values of the num1, num2 as well as the result of the addition.
+        Example: 
+            The sum of <num1> + <num2> is <result_value>
+
+
+##########################################################################################
+
+Notes:
+* make use of lookup_tables, as seen in lab-1
+ 
+
+
