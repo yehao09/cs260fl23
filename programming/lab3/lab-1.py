@@ -1,9 +1,14 @@
 '''
-    Convert the code from lab-1 into a function definition.
-    function header is provided to indicate input parameters and output data type
+Task-0 expanded:
+    Use the code from lab-1 to create a function definition.
+    * function header is provided to indicate:
+       function name
+       function input parameters
+       function output data type
+       docstring indicates what the function should return 
 
-    
-    replace pass keyword in the function body with code from lab-1.
+    * replace pass keyword in the function body with code from lab-1.
+
 '''
 
 def get_int(num: str, base = 10) -> int:
