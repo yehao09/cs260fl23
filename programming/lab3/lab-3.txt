@@ -13,7 +13,7 @@ Unless otherwise stated, use of special libraries is not allowed.
      decimal --> binary
      decimal --> octal
      decimal --> hexadecimal
-    
+
     examples:
     "25" is a string decimal --> "11001" binary
 
@@ -31,7 +31,7 @@ Unless otherwise stated, use of special libraries is not allowed.
 ##########################################################################################
 
 Notes:
-* make use of lookup_tables, as seen in lab-1
- 
+* do not use casting, make use of lookup_tables ( as seen in lab-1 )
+
 
 
