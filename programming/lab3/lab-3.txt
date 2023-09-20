@@ -8,6 +8,9 @@ Unless otherwise stated, use of special libraries is not allowed.
 ##########################################################################################            
 # lab-3 2023-09-20
 
+    Task-0:
+    Convert code from lab-1.py into a function definition, see lab-1.py
+
     Task-1:
     Implement Repeated Division algorithm to be able to convert 
      decimal --> binary
@@ -31,7 +34,17 @@ Unless otherwise stated, use of special libraries is not allowed.
 ##########################################################################################
 
 Notes:
-* do not use casting, make use of lookup_tables ( as seen in lab-1 )
+* do not use casting, use your get_int() function from lab1.py
+
+* python syntax reminder:
+   % remainder operator
+   / division operator
+   // floor division operator
+
+Therefore we can calculate remainder r and quotient q as follows:
+    r = q % base
+    q = q // base
+
 
 
 
