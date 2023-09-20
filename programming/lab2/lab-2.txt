@@ -30,7 +30,7 @@ Unless otherwise stated, use of special libraries is not allowed.
 ##########################################################################################
 
 Notes:
-* make use of lookup_tables, as seen in lab-1
+* do not use casting, make use of lookup_tables ( as seen in lab-1 )
 
 * process pair of digits starting from least significant side.
   you can make numbers same length, pad numbers with zeros on left side
