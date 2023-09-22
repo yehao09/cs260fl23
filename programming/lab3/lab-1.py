@@ -18,7 +18,8 @@ def get_int(num: str, base = 10) -> int:
 
 """
 
-sample code from lab-1 if you need it.
+sample code from lab-1 if you need it
+Note: if using the below make sure to spot/correct a bug
 
 lookup_table = {
     '0':0,
