@@ -6,7 +6,11 @@ def generate_numbers(base, number_of_digits, limit):
         print("Invalid base. Please choose 2, 8, 10, or 16.")
         return
 
-    base_characters = [str(i) for i in range(base)] + [chr(ord('A') + i) for i in range(6)] if base == 16 else [str(i) for i in range(base)]
+    if base == 16:
+        base_characters = [str(i) for i in range(10)] + ['A', 'B', 'C', 'D', 'E', 'F']
+    else:
+        base_characters = [str(i) for i in range(base)]
+
     base_name = "binary" if base == 2 else "octal" if base == 8 else "decimal" if base == 10 else "hexadecimal"
 
     print(f"Base-{base} Alphabet: {base_characters}")
