@@ -55,7 +55,7 @@ def generate_numbers(base, number_of_digits, limit):
             current_number[i] = base_characters[new_index]
 
             if carry == 1:
-                carry_str += "(Reset, carry)"
+                carry_str += "(Reset： carry)"
 
         current_number_str = ''.join(current_number)
         if int(current_number_str, base) < limit_num:
