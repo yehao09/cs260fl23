@@ -66,7 +66,6 @@ def add_two_numbers_(num1, num2, base):
     return result
 
 
-
 base = 2
 num1 = "1111"
 num2 = "01"
