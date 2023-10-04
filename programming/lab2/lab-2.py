@@ -68,25 +68,25 @@ def add_two_numbers_(num1, num2, base):
 
 base = 2
 num1 = "1111"
-num2 = "01"
-print ('in base:', base, " we have ",  num1,"+",num2 ,"is", add_two_numbers_(num1, num2, base))
+num2 = "11"
+print ('in base:', base, " given two numbers ",  num1,"+",num2 ," the result is ", add_two_numbers_(num1, num2, base))
 print()
 
 base = 8
 num1 = "775"
-num2 = "3"
-print ('in base:', base, " we have ", num1,"+",num2 ,"is", add_two_numbers_(num1, num2, base))
+num2 = "4"
+print ('in base:', base, " given two numbers ", num1,"+",num2 ," the result is ", add_two_numbers_(num1, num2, base))
 print()
 
 base = 10
 num1 = "95"
 num2 = "6"
-print ('in base:', base, " we have ", num1,"+",num2 ,"is", add_two_numbers_(num1, num2, base))
+print ('in base:', base, " given two numbers ", num1,"+",num2 ," the result is ", add_two_numbers_(num1, num2, base))
 print()
 
 base = 16
 num1 = "fe"
-num2 = "2"
-print ('in base:', base, " we have ",  num1,"+",num2 ,"is", add_two_numbers_(num1, num2, base))
+num2 = "3"
+print ('in base:', base, " given two numbers ",  num1,"+",num2 ," the result is ", add_two_numbers_(num1, num2, base))
 print()
 
