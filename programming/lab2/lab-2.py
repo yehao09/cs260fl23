@@ -35,3 +35,59 @@ lookup_table2 = {
     14:'e',
     15:'f'
 }
+
+def add_two_numbers_(num1, num2, base):
+
+    num2 = num2.zfill(len(num1))
+    num1 = num1.zfill(len(num2))
+
+    index = len(num1) -1
+    carry = 0
+    result = ""
+    while index >= 0:
+        digit1 = lookup_table1 [num1[index]]
+        digit2 = lookup_table1 [num2[index]]
+
+        sum_of_digits = digit1 + digit2 + carry
+
+        if sum_of_digits >= base:
+            carry = 1
+        else:
+            carry = 0
+
+        result = lookup_table2[ sum_of_digits % base ] + result
+
+        index -= 1
+
+    # conditionally include carry after the loop terminates
+    if carry == 1:
+        result = '1' + result 
+
+    return result
+
+
+
+base = 2
+num1 = "1111"
+num2 = "01"
+print ('in base:', base, " we have ",  num1,"+",num2 ,"is", add_two_numbers_(num1, num2, base))
+print()
+
+base = 8
+num1 = "775"
+num2 = "3"
+print ('in base:', base, " we have ", num1,"+",num2 ,"is", add_two_numbers_(num1, num2, base))
+print()
+
+base = 10
+num1 = "95"
+num2 = "6"
+print ('in base:', base, " we have ", num1,"+",num2 ,"is", add_two_numbers_(num1, num2, base))
+print()
+
+base = 16
+num1 = "fe"
+num2 = "2"
+print ('in base:', base, " we have ",  num1,"+",num2 ,"is", add_two_numbers_(num1, num2, base))
+print()
+
