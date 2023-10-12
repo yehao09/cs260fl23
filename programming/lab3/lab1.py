@@ -36,11 +36,20 @@ def weighted_sum(num: str, base = 10) -> int:
     # base = int(input("please enter a base: "))
 
     index = 0
-    exponent = len(num) - 1
+    try:
+        index_of_point = num.index('.')
+        exponent = index_of_point - 1
+    except:
+        exponent = len(num) - 1
+        index_of_point = None
+
 
     result_value = 0 # accumulator
-
-    while exponent >=0:
+    ic(exponent)
+    while index <= len(num) - 1:
+        if index == index_of_point:
+            index +=1
+            continue
         result_value += lookup_table[num[index]] * base**exponent
         index += 1
         exponent -= 1
@@ -49,7 +58,8 @@ def weighted_sum(num: str, base = 10) -> int:
 
 if __name__ == '__main__':
     # num = '01100010'
-    num = '1011'
+    # num = '1101.101'
+    num = '1a3.4b' # expected 419.29296875
     # num = '101.1010'
 
-    ic( weighted_sum(num, base = 2))
+    ic( weighted_sum(num, base = 16))
