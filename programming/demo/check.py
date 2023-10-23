@@ -9,10 +9,10 @@ def f3(a,b):
 
 
 '''
-    a function of N variables will ahve a truth table with 2**N rows
+    a function of N variables will have a truth table with 2**N rows
         2 variable yields 2**2 = 4 rows
 
-    Therefore, we will test our funcitons with the following boolean values:
+    Therefore, we will test our functions with the following boolean values:
                a  b
      test 1:   0  0
      test 2:   0  1
