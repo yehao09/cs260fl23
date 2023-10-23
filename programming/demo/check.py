@@ -30,7 +30,7 @@ assert f1(a,b) == f2(a,b) == f3(a,b), "error on 0 0"
 
 # test 2: 0 1 
 a = False
-b= True
+b = True
 assert f1(a,b) == f2(a,b) == f3(a,b), "error on 0 1"
 
 # test 3: 1 0 
