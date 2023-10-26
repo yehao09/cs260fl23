@@ -95,7 +95,7 @@ class Alphabet:
 
 if __name__ == "__main__":
     """ the below code executes when alphabet.py runs as a script,
-        but will NOT execute when File is imported as a module 
+        but will NOT execute when alphabet.py is imported as a module 
     see: https://realpython.com/if-name-main-python/ """
     print(lookup_base[10])
     a1  = Alphabet() # default argument value for base is 10
