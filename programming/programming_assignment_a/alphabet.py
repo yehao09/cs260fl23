@@ -62,14 +62,16 @@ class Alphabet:
     def __init__(self, base = 10):
         """ constructor """
         self._base = base     # indicate the base for the alphabet
-        self._SIZE = base     # same as base
+        self._size = base     # same as base
+        self.__base2 = base   # or __var, to avoid name clashes by uisng name mangling
         self._symbols =  list(hexdigits[:base]) # alphabet of symbols 
         # Note: 'private' variables do not exist in Python classes
         #   see https://docs.python.org/3/tutorial/classes.html#tut-private
+        #  python does not prevent us from access to: obj._base, obj._Alphabet__base2   
 
     def size(self):
         """ return size of alphabet """
-        return self._SIZE
+        return self._size
 
     def max_valid(self):
        """ returns highest value of alphabet - color coded in red """
@@ -132,5 +134,14 @@ if __name__ == "__main__":
     print('subscript [1]', a16[1]) # expected '1' 
     print('subscript [-1]', a16[-1]) # expected 'f' 
     print()
+    
+    # no private variables
+    print(f'Python classes do not not have {ANSI_COLOR_RED} "private" {ANSI_COLOR_RESET} members:')
+    print('You should still define/use getters as proper programming practice!')
+    print('Direct access to variables with dot operator is bad practice:')
+    print('  Python does not prevent us from access to: obj._base, obj._Alphabet__base2')   
+    print('  a16._base:', a16._base)
+    print('  a16._Alphabet__base2:', a16._Alphabet__base2)
+    print('  see https://docs.python.org/3/tutorial/classes.html#tut-private')
 
 
