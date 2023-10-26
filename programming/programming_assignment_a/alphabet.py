@@ -61,14 +61,13 @@ lookup_base = {
 class Alphabet:
     def __init__(self, base = 10):
         """ constructor """
-        self._base = base     # indicate the base for the alphabet
-        self._size = base     # same as base
-        self.__base2 = base   # or __var, to avoid name clashes by uisng name mangling
-        self._symbols =  list(hexdigits[:base]) # alphabet of symbols 
         # Note: 'private' variables do not exist in Python classes
         #   see https://docs.python.org/3/tutorial/classes.html#tut-private
-        #  python does not prevent us from access to: obj._base, obj._Alphabet__base2   
-
+        #   Python does not prevent us from access to: obj._base, obj._Alphabet__base2   
+        self._base = base     # indicate the base for the alphabet
+        self.__base = base   # or __var, to avoid name clashes by using name mangling
+        self._size = base     # same as base
+        self._symbols =  list(hexdigits[:base]) # alphabet of symbols 
     def size(self):
         """ return size of alphabet """
         return self._size
@@ -139,9 +138,9 @@ if __name__ == "__main__":
     print(f'Python classes do not not have {ANSI_COLOR_RED} "private" {ANSI_COLOR_RESET} members:')
     print('You should still define/use getters as proper programming practice!')
     print('Direct access to variables with dot operator is bad practice:')
-    print('  Python does not prevent us from access to: obj._base, obj._Alphabet__base2')   
+    print('  Python does not prevent us from access to: obj._base, obj._Alphabet__base')   
     print('  a16._base:', a16._base)
-    print('  a16._Alphabet__base2:', a16._Alphabet__base2)
+    print('  a16._Alphabet__base:', a16._Alphabet__base)
     print('  see https://docs.python.org/3/tutorial/classes.html#tut-private')
 
 
