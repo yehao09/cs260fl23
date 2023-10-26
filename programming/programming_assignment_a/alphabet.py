@@ -68,6 +68,7 @@ class Alphabet:
         self.__base = base    # or __var, to avoid name clashes by using name mangling
         self._size = base     # same as base
         self._symbols =  list(hexdigits[:base]) # alphabet of symbols 
+            
     def size(self):
         """ return size of alphabet """
         return self._size
