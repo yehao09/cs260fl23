@@ -1,4 +1,3 @@
-import math
 from string import hexdigits
 
 ANSI_COLOR_RED     =  "\x1b[31m"
@@ -30,31 +29,31 @@ lookup_table1 = {
 }
 
 lookup_table2 = {
-    0:'0',
-    1:'1',
-    2:'2',
-    3:'3',
-    4:'4',
-    5:'5',
-    6:'6',
-    7:'7',
-    8:'8',
-    9:'9',
-    10:'a',
-    11:'b',
-    12:'c',
-    13:'d',
-    14:'e',
-    15:'f'
+        0:'0',
+        1:'1',
+        2:'2',
+        3:'3',
+        4:'4',
+        5:'5',
+        6:'6',
+        7:'7',
+        8:'8',
+        9:'9',
+        10:'a',
+        11:'b',
+        12:'c',
+        13:'d',
+        14:'e',
+        15:'f'
 }
 
 
 # define lookup table for base 
 lookup_base = {
-    2, "binary",
-    8, "octal",
-    10, "decimal",
-    16, "hexadecimal"
+        2:"binary",
+        8:"octal",
+        10:"decimal",
+        16:"hexadecimal"
 }
 
 
@@ -62,32 +61,32 @@ lookup_base = {
 class Alphabet:
     def __init__(self, base = 10):
         """ constructor """
-        self.base = base     # indicate the base for the alphabet
-        self.SIZE = base     # same as base
-        self.symbols =  list(hexdigits[:base]) # alphabet of symbols 
+        self._base = base     # indicate the base for the alphabet
+        self._SIZE = base     # same as base
+        self._symbols =  list(hexdigits[:base]) # alphabet of symbols 
         # Note: 'private' variables do not exist in Python classes
         #   see https://docs.python.org/3/tutorial/classes.html#tut-private
 
     def size(self):
         """ return size of alphabet """
-        return self.SIZE
+        return self._SIZE
 
-    def maxValid(self):
+    def max_valid(self):
        """ returns highest value of alphabet - color coded in red """
        # Note: you can also use a module, e.g. https://pypi.org/project/colorama/
-       return ANSI_COLOR_RED    + self.symbols[-1] + ANSI_COLOR_RESET   
+       return ANSI_COLOR_RED    + self._symbols[-1] + ANSI_COLOR_RESET   
 
     def __repr__(self):
         """ provide string representation  """
         # note: you can define __str__ instead of __repr__
         # however if __str__ is not defined it falls back on __repr__
         # also see: https://realpython.com/python-repr-vs-str/
-        return '{' + str( self.symbols )[1:-1] + '}'
+        return '{' + str( self._symbols )[1:-1] + '}'
 
     def __getitem__(self, index):
         """ subscript operator: obj[i] returns alphabet element at i """
         # see: https://docs.python.org/3/reference/datamodel.html#object.__getitem__
-        return self.symbols[index] 
+        return self._symbols[index] 
 
 
 
@@ -95,20 +94,43 @@ if __name__ == "__main__":
     """ the below code executes when alphabet.py runs as a script,
         but will NOT execute when File is imported as a module 
     see: https://realpython.com/if-name-main-python/ """
-    print(a1)
-    print(a1.maxValid()) 
-    print(a1.size())
-    print(a1[1]) # expected '1' 
-    print(a1[9]) # expected '9' 
+    print(lookup_base[10])
+    a1  = Alphabet() # default argument value for base is 10
+    print('string representation:', a1)  # test string representation of object
+    print('max_valid():',a1.max_valid())  
+    print('size()',a1.size())
+    print('subscript [1]', a1[1]) # expected '1' 
+    print('subscript [-1]', a1[-1]) # expected '9' 
+    print()
 
+    base = 2
+    print(lookup_base[base])
+    a2 = Alphabet(base)
+    print('string representation:', a2)  # test string representation of object
+    print('max_valid():',a2.max_valid())  
+    print('size()', a2.size())
+    print('subscript [1]', a2[1]) # expected '1' 
+    print('subscript [-1]', a2[-1]) # expected '9' 
+    print()
 
-    a1  = Alphabet(base = 16)
-    print(a1)
-    print(a1.maxValid()) 
-    print(a1.size())
-    print(a1[1]) # expected '1' 
-    prin
-    t(a1[15]) # expected 'f' 
+    base = 8
+    print(lookup_base[base])
+    a8 = Alphabet(base)
+    print('string representation:', a8)  # test string representation of object
+    print('max_valid():',a8.max_valid())  
+    print('size()',a8.size())
+    print('subscript [1]', a8[1]) # expected '1' 
+    print('subscript [-1]', a8[-1]) # expected '7' 
+    print()
 
+    base = 16
+    print(lookup_base[base])
+    a16  = Alphabet(base)
+    print('string representation:', a16)  # test string representation of object
+    print('max_valid():',a16.max_valid())  
+    print('size()',a16.size())
+    print('subscript [1]', a16[1]) # expected '1' 
+    print('subscript [-1]', a16[-1]) # expected 'f' 
+    print()
 
 
