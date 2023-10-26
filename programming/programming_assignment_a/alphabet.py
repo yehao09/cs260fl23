@@ -64,6 +64,7 @@ class Alphabet:
         # Note: 'private' variables do not exist in Python classes
         #   see https://docs.python.org/3/tutorial/classes.html#tut-private
         #   Python does not prevent us from access to: obj._base, obj._Alphabet__base   
+        # self.base = base  
         self._base = base     # indicate the base for the alphabet
         self.__base = base    # or __var, to avoid name clashes by using name mangling
         self._size = base     # same as base
