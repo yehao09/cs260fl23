@@ -98,12 +98,12 @@ if __name__ == "__main__":
         but will NOT execute when alphabet.py is imported as a module 
     see: https://realpython.com/if-name-main-python/ """
     print(lookup_base[10])
-    a1  = Alphabet() # default argument value for base is 10
-    print('string representation:', a1)  # test string representation of object
-    print('max_valid():',a1.max_valid())  
-    print('size()',a1.size())
-    print('subscript [0]', a1[0]) # expected '0' 
-    print('subscript [-1]', a1[-1]) # expected '9' 
+    a10  = Alphabet() # default argument value for base is 10
+    print('string representation:', a10)  # test string representation of object
+    print('max_valid():',a10.max_valid())  
+    print('size()',a10.size())
+    print('subscript [0]', a10[0]) # expected '0' 
+    print('subscript [-1]', a10[-1]) # expected '9' 
     print()
 
     base = 2
