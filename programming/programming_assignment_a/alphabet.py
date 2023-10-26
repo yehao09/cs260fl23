@@ -101,7 +101,7 @@ if __name__ == "__main__":
     print('string representation:', a1)  # test string representation of object
     print('max_valid():',a1.max_valid())  
     print('size()',a1.size())
-    print('subscript [1]', a1[1]) # expected '1' 
+    print('subscript [0]', a1[1]) # expected '0' 
     print('subscript [-1]', a1[-1]) # expected '9' 
     print()
 
@@ -111,8 +111,8 @@ if __name__ == "__main__":
     print('string representation:', a2)  # test string representation of object
     print('max_valid():',a2.max_valid())  
     print('size()', a2.size())
-    print('subscript [1]', a2[1]) # expected '1' 
-    print('subscript [-1]', a2[-1]) # expected '9' 
+    print('subscript [0]', a2[1]) # expected '0' 
+    print('subscript [-1]', a2[-1]) # expected '1' 
     print()
 
     base = 8
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     print('string representation:', a8)  # test string representation of object
     print('max_valid():',a8.max_valid())  
     print('size()',a8.size())
-    print('subscript [1]', a8[1]) # expected '1' 
+    print('subscript [0]', a8[1]) # expected '0' 
     print('subscript [-1]', a8[-1]) # expected '7' 
     print()
 
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     print('string representation:', a16)  # test string representation of object
     print('max_valid():',a16.max_valid())  
     print('size()',a16.size())
-    print('subscript [1]', a16[1]) # expected '1' 
+    print('subscript [0]', a16[1]) # expected '0' 
     print('subscript [-1]', a16[-1]) # expected 'f' 
     print()
     
