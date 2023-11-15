@@ -1,0 +1,97 @@
+
+Create a new class named Implicant.
+
+1) The constructor of the Implicant class:
+    a) should have a string parameter named implicant
+    b) should have a list parameter named covered_minterms
+     Note: The covered_minterms parameter should have a default argument value of None
+
+2) Inside the body of the constructor:
+    a) first check the to see if implicant is a string,
+    raise a TypeError indicating the implicant must be given as string
+
+    b) Initialize instance variable implicant_str (i.e. self.implicant_str)
+      to the implicant parameter
+
+    c) Initialize instance variable implicant (i.e. self.implicant)
+      by converting the implicant parameter to tuple
+       e.g. "ab'c"  --> ("a","b'","c")
+      Note:  you can create a helper method for this task.
+
+    d) Initialize instance variable implicant_bin (i.e. self.implicant_bin)
+      by converting the implicant tuple to the tuple with binary representation
+       e.g. ("a","b'","c") --> (1,0,1)
+      Note:  you can create a helper method for this task.
+
+    e) Initialize instance variable hamming_weight (i.e. self.hamming_weight)
+      by converting the implicant tuple with binary representation to the hamming weight
+       e.g.  (1,0,1) --> 2
+      Note:  you can create a helper method for this task.
+
+    f) Initialize instance variable covered_minterms (i.e. self.covered_minterms)
+      The values of the instance variable covered_minterms should be calculated as follows:
+          if constructor parameter covered_minterms is None
+             then
+              convert the implicant tuple with binary representation to an iterable containing
+               the integer value of the minterm.
+             e.g. (1,0,1) --> [5]
+           else  the instance variable covered_minterms should be initialized
+           with value of the covered_minterms parameter.
+      Note:  you can create a helper method for this task.
+
+
+    g) Initialize instance variable is_prime (i.e. self.is_prime) to True
+       Note: we assume by default that our implicant is a Prime Implicant, until proven otherwise.
+
+    3) Create getter methods for all of the instance variables of the constructor
+
+
+    4) Create a string representation of the class,
+       Define __repr__ method, this method should return a string
+        with values of implicant_str and covered_minterms
+        e.g.   --> a'b'c'(0)
+
+    5) Define subscript operator: obj[i]
+       i.e Define  __getitem__ method that returns element
+       of tuple representation of the implicant.
+
+    6) Define helper method to aid in initialization of self.implicant
+       This method should convert implicant_str to tuple
+             e.g "ab'c" --> ("a", "b'", "c")
+
+    7) Define helper method to aid in initialization of self.implicant_bin
+       This method should convert implicant to tuple of binary integers
+       e.g. ("a","b'","c") --> (1,0,1)
+
+    8) Define helper method to aid in initialization of self.hamming_weight
+       e.g. (1,0,1) --> 5
+
+    9) Define helper method to aid in initialization of self.covered_minterms
+       as described in section 2.f
+
+    10) Create a simplify method that has a parameter named another_implicant.
+        Inside of the body of the simplify method:
+        a) first check the to see if another_implicant is of implicant class
+           raise a TypeError indicating the another_implicant must be of Implicant class
+
+        b) perform simplification between current implicant and another_implicant
+            If simplification was not possible
+            then
+                return None
+            Else
+                return a new Implicant with the simplified term.
+                    Note: the covered_minterm value of the simplified term should be the
+                           combined values of the covered_minterm from current and another_minterm
+
+            e.g.
+            suppose self.implicant is ("a'", "b'", "c'") with covered_minterm value of {0}
+            suppose another_implicant is ("a","b'","c'") with covered_minterm value of {4}
+            then the return will be Implicant ("b'c'", [0,4])
+
+    11) Make sure to create test for your class
+        make sure to test constructor, getters, and simplify method
+        e.g. add a guard if statement and in the boy
+        if __name__ == "__main__":
+            """ create test cased to test all methods of your class,
+                pay special attention to the simplify method
+            """
