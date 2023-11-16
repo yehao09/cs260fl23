@@ -1,4 +1,13 @@
 
+Due date: 2023-11-30, 11:59 PM 
+Push to your GitHub repository that you created at the start of the semester
+Help at Google meet meetups via https://meet.google.com/gzj-nqyt-jet:
+Nov 19th  @   7:30pm - 8:30pm
+Nov 22nd  @  6pm-8:30pm
+Nov 26th   @  7:30pm - 8:30pm
+
+
+
 Create a new class named Implicant.
 
 1) The constructor of the Implicant class:
