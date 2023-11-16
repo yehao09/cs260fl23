@@ -89,7 +89,7 @@ Create a new class named Implicant.
             then the return will be Implicant ("b'c'", [0,4])
 
     11) Make sure to create tests for your class
-        make sure to test constructor, getters, and simplify method
+         [ test: constructor, setters/getters, and simplify method ]
         e.g. add a guard if statement and in the boy
         if __name__ == "__main__":
             """ create test cased to test all methods of your class,
