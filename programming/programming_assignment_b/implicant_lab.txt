@@ -88,7 +88,7 @@ Create a new class named Implicant.
             suppose another_implicant is ("a","b'","c'") with covered_minterm value of {4}
             then the return will be Implicant ("b'c'", [0,4])
 
-    11) Make sure to create test for your class
+    11) Make sure to create tests for your class
         make sure to test constructor, getters, and simplify method
         e.g. add a guard if statement and in the boy
         if __name__ == "__main__":
