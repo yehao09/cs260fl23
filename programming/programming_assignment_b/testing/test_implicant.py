@@ -9,6 +9,7 @@ import unittest
         .get_cover() --> tuple containing minterm cover,
                          e.g. (1,) for minterm a'b  
                               (0,1) for term a' that was a result of simplification a'b'(0), a'b(1)
+        .simplify(another_implicant) --> is simplification is possible return simplified term with updated minterm cover; otherwise None
 '''
 
 class TestImplicantMethods(unittest.TestCase):
